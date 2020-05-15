@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ACM.BLTest
+namespace ACM.BL
 {
-    class OrderItem
+    public class OrderItem
     {
         public OrderItem() { }
         public OrderItem(int orderItemId)
