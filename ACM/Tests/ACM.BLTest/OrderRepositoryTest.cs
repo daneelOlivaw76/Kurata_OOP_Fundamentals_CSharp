@@ -16,7 +16,7 @@ namespace ACM.BLTest
             {
                 CustomerId = 1,
                 OrderDate = new DateTimeOffset(DateTime.Now.Year, 4, 14, 10, 00, 00, new TimeSpan(7, 0, 0)),
-                ShippingAddress = "Hobbiton, Baggs End"
+                //ShippingAddress = "Hobbiton, Baggs End"
             };
 
             //-- Act
@@ -25,7 +25,7 @@ namespace ACM.BLTest
             //-- Assert
             Assert.AreEqual(expected.CustomerId, actual.CustomerId);
             Assert.AreEqual(expected.OrderDate, actual.OrderDate);
-            Assert.AreEqual(expected.ShippingAddress, actual.ShippingAddress);
+            //Assert.AreEqual(expected.ShippingAddress, actual.ShippingAddress);
         }
     }
 }

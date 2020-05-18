@@ -20,9 +20,30 @@ namespace ACM.BL
             return Product;
         }
 
-        public bool Save(Product Product)
+        public bool Save(Product product)
         {
-            return true;
+            var success = true;
+
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        // Call an Insert SP
+                    }
+                    else
+                    {
+                        // Call an update SP
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+
+            return success;
         }
     }
 }

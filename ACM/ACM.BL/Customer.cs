@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Net.Sockets;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer: EntityBase
     {
         public Customer(): this(0) {
         
@@ -54,13 +55,15 @@ namespace ACM.BL
             }
         }
 
+        public override string ToString() => this.FullName;
+
         /// <summary>
         ///     Validates the customer data.
         /// </summary>
         /// <returns>
         ///     boolean Isvalid, if data is valid.
         /// </returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 

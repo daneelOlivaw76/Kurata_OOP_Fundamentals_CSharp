@@ -14,7 +14,7 @@ namespace ACM.BL
             {
                 Order.CustomerId = 1;
                 Order.OrderDate = new DateTimeOffset(DateTime.Now.Year, 4, 14, 10, 00, 00, new TimeSpan(7,0,0));
-                Order.ShippingAddress = "Hobbiton, Baggs End";
+                //Order.ShippingAddress = "Hobbiton, Baggs End";
             }
 
             return Order;
