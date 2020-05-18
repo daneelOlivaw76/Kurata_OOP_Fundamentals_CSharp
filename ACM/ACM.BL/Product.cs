@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using static Acme.Common.StringHandler;
+using Acme.Common;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product() { }
 
@@ -29,6 +30,9 @@ namespace ACM.BL
                 _productName = value;
             }
         }
+
+        public string Log() => $"{ProductId}: {ProductName} Detail: {ProductDescription} " +
+                                    $"Status: {EntityState.ToString()}";
 
         public override string ToString() => this.ProductName;
 
